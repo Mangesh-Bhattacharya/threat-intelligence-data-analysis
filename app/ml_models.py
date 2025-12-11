@@ -93,7 +93,7 @@ class AnomalyDetector:
             anomalies.append({
                 'index': int(idx),
                 'anomaly_score': float(normalized_scores[idx]),
-                'severity': self._score_to_severity(normalized_scores[idx]),
+                'severity': self._score_to_severity(float(normalized_scores[idx])),
                 'timestamp': data.iloc[idx].get('timestamp', datetime.now()).isoformat() if 'timestamp' in data.columns else datetime.now().isoformat()
             })
         
