@@ -15,7 +15,7 @@ torch==2.0.1
 joblib==1.3.2
 
 # Security & Cryptography
-cryptography==41.0.4
+cryptography==44.0.1
 pycryptodome==3.18.0
 python-jose==3.3.0
 
