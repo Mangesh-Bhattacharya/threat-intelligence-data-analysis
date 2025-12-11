@@ -22,7 +22,7 @@ python-jose==3.3.0
 # API & Web
 fastapi==0.103.1
 uvicorn==0.23.2
-requests==2.31.0
+requests==2.32.4
 aiohttp==3.8.5
 
 # Database
