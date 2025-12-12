@@ -13,7 +13,7 @@ jobs:
     
     strategy:
       matrix:
-        python-version: [3.9, 3.10, 3.11]
+        python-version: ['3.9', '3.10', '3.11']
     
     steps:
     - uses: actions/checkout@v3
@@ -44,7 +44,7 @@ jobs:
     
     - name: Check code formatting
       run: |
-        black app/ utils/
+        black app/ utils/ --check
     
     - name: Run tests with coverage
       run: |
@@ -63,6 +63,11 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
     
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@master
