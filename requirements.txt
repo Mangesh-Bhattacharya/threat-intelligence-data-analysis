@@ -31,29 +31,15 @@ redis==5.0.0
 elasticsearch==8.9.0
 
 # Cloud Services
-boto3==1.28.25  # AWS
-azure-storage-blob==12.17.0  # Azure
-google-cloud-storage==2.10.0  # GCP
+boto3==1.28.25              # AWS
+azure-storage-blob==12.17.0 # Azure
+google-cloud-storage==2.10.0 # GCP
 
 # Monitoring & Logging
 prometheus-client==0.17.1
 python-json-logger==2.0.7
 
-# Data Processing
+# Data Processing & Utils
 pyyaml==6.0.1
 python-dotenv==1.0.0
 pytz==2023.3
-
-# Testing
-pytest==7.4.0
-pytest-cov==4.1.0
-pytest-asyncio==0.21.1
-
-# Code Quality
-black==23.7.0
-flake8==6.1.0
-mypy==1.5.1
-
-# Documentation
-mkdocs==1.5.2
-mkdocs-material==9.2.8
