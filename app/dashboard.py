@@ -1,4 +1,4 @@
-"""
+""" 
 Threat Intelligence Data Analysis Dashboard
 Advanced Streamlit-based security monitoring and threat analysis platform
 """
@@ -87,7 +87,7 @@ with st.sidebar:
     st.markdown("---")
     
     # Auto-refresh
-    auto_refresh = st.checkbox("Auto-refresh (30s)", value=True)
+    auto_refresh = st.checkbox("Auto-refresh (30s)", value=False)
     
     if st.button("🔄 Refresh Data", use_container_width=True):
         st.rerun()
@@ -403,8 +403,6 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-# Auto-refresh logic
+# Auto-refresh using Streamlit's native method
 if auto_refresh:
-    import time
-    time.sleep(30)
     st.rerun()
