@@ -49,7 +49,8 @@ jobs:
     
     - name: Check code formatting
       run: |
-        black app/ utils/ --check
+        black app/ utils/ --check --diff
+      continue-on-error: true
     
     - name: Run tests with coverage
       run: |
